@@ -1,7 +1,7 @@
-import {React , Component} from 'react';
+import React , {Component} from 'react';
 
-class landing extends component{
-    render(){
+class landing extends Component{
+    render() {
         return(
             <div><h1>Landing Page</h1></div>
         );
