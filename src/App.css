@@ -13,13 +13,31 @@ background: linear-gradient(to bottom, #24243e, #302b63, #0f0c29); /* W3C, IE 10
 }
 
 .myPic{
-    height: 250px;
-    padding-top: 5em;
-    
+    height: 300px;
+    padding-top: 1em;
+    border-radius: 40%;
+    padding-left: 2em;;
 }
 .myText{
     background-color: black;
     opacity: .8;
     width: 75%;
     margin:auto;
+    text-align: center;
+    align-self: center;
+}
+.myText h4,p{
+    color: white;
+    padding-bottom: 0;
+    margin: auto;
+}
+.myText h4{
+    padding-top: 1em;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+.myText hr{
+    border-top: 5px dotted white;
+    width: 50%;
+    margin: auto;
 }
