@@ -84,3 +84,6 @@ background: linear-gradient(to right, #1565C0, #b92b27); /* W3C, IE 10+/ Edge, F
     opacity: 0;
     transition: opacity 150ms linear;
 }
+.project_grid{
+    display: flex;
+}

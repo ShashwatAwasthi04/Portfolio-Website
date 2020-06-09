@@ -39,7 +39,7 @@ class landing extends Component{
                             <hr />
 
                             <h4>Competitive Programmer</h4>
-                            <p>JAVA || Data Structures and Algorithms || </p>
+                            <p>JAVA || Data Structures and Algorithms</p>
                             <hr />
                             <h4>Data Analytics Enthusiast</h4>
                             <p>Data Analysis using SQl</p>
