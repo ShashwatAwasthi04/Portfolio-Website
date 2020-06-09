@@ -1,8 +1,14 @@
 import React from 'react';
 import './App.css';
 import {Layout, Header, Navigation, Drawer, Content,HeaderRow} from 'react-mdl';
-import Routes from './components/routes';
-import {Link} from 'react-router-dom';
+import {Switch,Route,Link} from 'react-router-dom';
+import Landing from './components/landing';
+import myResume from './components/myresume';
+import projects from './components/projects';
+import intro from './components/intro';
+import Contact from './components/contactme';
+
+import {CSSTransition , TransitionGroup} from 'react-transition-group';
 
 function App() {
   return (
@@ -14,6 +20,7 @@ function App() {
             </HeaderRow>
             <HeaderRow>
                 <Navigation>
+                    <Link to="/">Back to Home Page</Link>
                     <Link to="/resume">Check Resume</Link>
                     <Link to="/intro">Who Am I?</Link>
                     <Link to="/projects">Projects</Link>
@@ -23,6 +30,7 @@ function App() {
         </Header>
         <Drawer title="Title">
             <Navigation>
+            <Link to="/">Back to Home Page</Link>
                 <Link to="/resume">Check Resume</Link>
                 <Link to="/intro">Who Am I?</Link>
                 <Link to="/projects">Projects</Link>
@@ -31,7 +39,24 @@ function App() {
         </Drawer>
         <Content>
             <div className="page-content" />
-            <Routes />
+            <Route render={({location}) => (
+                <TransitionGroup>
+                    <CSSTransition
+                    key={location.key}
+                    timeout={300}
+                    classNames="fade"
+                    >
+                    <Switch location={location}>
+                        <Route exact path="/" component={Landing} />
+                        <Route path="/resume" component={myResume} />
+                        <Route path="/projects" component={projects} />
+                        <Route path="/intro" component={intro} />
+                        <Route path="/contact" component={Contact} />
+                </Switch>
+                </CSSTransition>
+            </TransitionGroup>
+            )} />
+            
         </Content>
     </Layout>
 </div>
