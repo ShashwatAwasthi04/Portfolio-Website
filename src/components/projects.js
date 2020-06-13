@@ -32,7 +32,7 @@ class projects extends Component{
         <Button colored>View Updates</Button>
     </CardActions>
 </Card>
-                
+            
                 </div>
             )
         }
